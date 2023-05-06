@@ -12,10 +12,8 @@ Student.prototype.setSubject = function (subjectName) {
 Student.prototype.addMarks = function (...marks) {
     if (!(this.hasOwnProperty('marks'))) {
         return "Невозможность добавлять оценки отчисленному студенту";
-    } else if (this.marks === undefined) {
-        this.marks = marks;
     } else {
-        this.marks = this.marks.concat(marks);
+        this.marks.push(...marks);
     }
 }
 
