@@ -23,7 +23,9 @@ class Triangle {
         this.a = a; 
         this.b = b; 
         this.c = c;
-        if (a + b < c || a + c < b || b + c < a) throw new Error('Треугольник с такими сторонами не существует');
+        if (a + b < c || a + c < b || b + c < a) {
+            throw new Error('Треугольник с такими сторонами не существует');
+        }
     }
 
     get perimeter() {
@@ -31,7 +33,7 @@ class Triangle {
     }
 
     get area() {
-    let p = (this.a + this.b + this.c) * 0.5; 
+    let p = this.perimeter * 0.5; 
     let s = Math.sqrt(p * (p - this.a) * (p - this.b) * (p - this.c));
     return +s.toFixed(3);
     }
