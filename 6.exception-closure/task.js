@@ -38,7 +38,7 @@ class Triangle {
     return +s.toFixed(3);
     }
 }
-
+ ю.ё
 function getTriangle(a, b, c) {
     try {
         return new Triangle(a, b, c);
